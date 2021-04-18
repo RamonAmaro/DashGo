@@ -14,8 +14,8 @@ import {
   Tr,
 } from "@chakra-ui/react";
 import React from "react";
-import { RiAddBoxLine } from "react-icons/ri";
-import { Header, Sidebar } from "../../components";
+import { RiAddLine, RiEdit2Line } from "react-icons/ri";
+import { Header, Pagination, Sidebar } from "../../components";
 
 export default function UserList() {
   return (
@@ -36,7 +36,8 @@ export default function UserList() {
               size="sm"
               fontSize="sm"
               colorScheme="pink"
-              leftIcon={<Icon as={RiAddBoxLine} />}
+              leftIcon={<Icon as={RiAddLine} fontSize="20" />}
+              cursor="pointer"
             >
               Criar novo
             </Button>
@@ -65,10 +66,81 @@ export default function UserList() {
                     </Text>
                   </Box>
                 </Td>
-                <Td> 04 jul, 2021 </Td>
+                <Td>
+                  <Flex justify="space-between" align="center">
+                    <Text> 04 jul, 2021 </Text>
+                    <Button
+                      as="a"
+                      size="sm"
+                      fontSize="sm"
+                      colorScheme="purple"
+                      leftIcon={<Icon as={RiEdit2Line} />}
+                      cursor="pointer"
+                    >
+                      Editar
+                    </Button>
+                  </Flex>
+                </Td>
+              </Tr>
+              <Tr>
+                <Td px="6">
+                  <Checkbox colorScheme="pink" />
+                </Td>
+                <Td>
+                  <Box>
+                    <Text fontWeight="bold"> Ramon Amaro </Text>
+                    <Text fontWeight="normal" fontSize="sm" color="gray.300">
+                      ramonamaro.dev@gmail.com
+                    </Text>
+                  </Box>
+                </Td>
+                <Td>
+                  <Flex justify="space-between" align="center">
+                    <Text> 04 jul, 2021 </Text>
+                    <Button
+                      as="a"
+                      size="sm"
+                      fontSize="sm"
+                      colorScheme="purple"
+                      leftIcon={<Icon as={RiEdit2Line} />}
+                      cursor="pointer"
+                    >
+                      Editar
+                    </Button>
+                  </Flex>
+                </Td>
+              </Tr>
+              <Tr>
+                <Td px="6">
+                  <Checkbox colorScheme="pink" />
+                </Td>
+                <Td>
+                  <Box>
+                    <Text fontWeight="bold"> Ramon Amaro </Text>
+                    <Text fontWeight="normal" fontSize="sm" color="gray.300">
+                      ramonamaro.dev@gmail.com
+                    </Text>
+                  </Box>
+                </Td>
+                <Td>
+                  <Flex justify="space-between" align="center">
+                    <Text> 04 jul, 2021 </Text>
+                    <Button
+                      as="a"
+                      size="sm"
+                      fontSize="sm"
+                      colorScheme="purple"
+                      leftIcon={<Icon as={RiEdit2Line} />}
+                      cursor="pointer"
+                    >
+                      Editar
+                    </Button>
+                  </Flex>
+                </Td>
               </Tr>
             </Tbody>
           </Table>
+          <Pagination />
         </Box>
       </Flex>
     </Box>
