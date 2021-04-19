@@ -1,4 +1,4 @@
 export * from "./Form/Input";
-export * from "./Header";
+export * from "./Header/Index";
 export * from "./Pagination";
 export * from "./Sidebar";

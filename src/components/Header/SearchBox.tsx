@@ -1,5 +1,5 @@
 import { Flex, Icon, Input } from "@chakra-ui/react";
-import React from "react";
+import React, { useRef } from "react";
 import { RiSearch2Line } from "react-icons/ri";
 
 interface ISearchBox {
@@ -7,6 +7,10 @@ interface ISearchBox {
 }
 
 export const SearchBox: React.FC<ISearchBox> = ({ isWadeVersion }) => {
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
+  console.log(searchInputRef.current.value);
+
   return (
     <>
       {isWadeVersion && (
@@ -24,6 +28,7 @@ export const SearchBox: React.FC<ISearchBox> = ({ isWadeVersion }) => {
           borderRadius="full"
         >
           <Input
+            ref={searchInputRef}
             color="gray.50"
             variant="unstyled"
             px="4"
