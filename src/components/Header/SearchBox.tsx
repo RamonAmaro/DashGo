@@ -9,7 +9,7 @@ interface ISearchBox {
 export const SearchBox: React.FC<ISearchBox> = ({ isWadeVersion }) => {
   const searchInputRef = useRef<HTMLInputElement>(null);
 
-  console.log(searchInputRef.current.value);
+  console.log(searchInputRef.current?.value);
 
   return (
     <>
